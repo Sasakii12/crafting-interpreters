@@ -1,7 +1,7 @@
 use core::fmt;
 
 #[derive(Debug, Clone, PartialEq)]
-enum TokenType {
+pub enum TokenType {
     // Single-character tokens.
   LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,
   COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,
@@ -23,7 +23,7 @@ enum TokenType {
 }
 
 #[derive(Debug, Clone, PartialEq)]
-enum Literal {
+pub enum Literal {
     Str(String),
     Bool(bool),
     Number(f64),
@@ -41,7 +41,7 @@ impl fmt::Display for Literal {
     }
 }
 
-struct Token {
+pub struct Token {
     token_type: TokenType,
     lexeme: String,
     literal: Literal,

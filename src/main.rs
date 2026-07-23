@@ -6,6 +6,7 @@ use std::io::{self, BufRead};
 use std::path::Path;
 
 mod tokens;
+mod scanner;
 
 fn input() -> String {
     let mut buf = String::new();
